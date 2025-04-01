@@ -1,0 +1,124 @@
+:root {
+    --background-color: #FFFFFF;
+    --nav-background-color: #F5F5F5;
+    --nav-active-btn-color:#EBEBEB;
+    --text-color: #1F1F1F;
+    --subtext-color: #A4A4A4;
+    --border-color: #D4D4D4;
+    --accent-red-color: #C59A93;
+    --accent-yellow-color: #CEC8A3;
+    --accent-green-color: #AECCB1;
+    --accent-blue-color: #B3B3DE;
+}
+
+html, body {
+    font-family: "Inter";
+    margin: 0;
+    padding: 0;
+}
+
+/* The side navigation menu */
+.sidebar {
+    width: 272px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 1px 0px 4px 0px var(--border-color);
+}
+
+.nav-logo h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+}
+
+.nav-links {
+    padding-top: 60px;
+}
+
+.nav-links img {
+    transform: translateY(3px);
+    padding-right: 10px;
+}
+
+  /* Sidebar links */
+  .nav-links a {
+    display: block;
+    color: #656565;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 12px;
+    margin: 10px;
+  }
+  
+  /* Active/current link */
+  .nav-links a.active {
+    background-color:var(--nav-active-btn-color);
+
+  }
+  
+  /* Links on mouse-over */
+  .nav-links a:hover:not(.active) {
+    //background-color: #555; // removed right now for consistency w apple music UI
+    color: white;
+  }
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    position: fixed;
+    transform: translateX(15px) translateY(-20px);
+}
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    padding: 10px;
+  }
+
+.footer-links a:hover {
+    color: black;
+}
+
+  .nav-footer h2 {
+    margin-top: 0;
+    font-size: 13px;
+    color: #B8B8B8;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 272px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
