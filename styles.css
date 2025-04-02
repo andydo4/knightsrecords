@@ -17,6 +17,65 @@ html, body {
     padding: 0;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#CDCase {
+  width: 40%;
+  margin-top: 20px;
+  transform: translateX(15px);
+}
+
+.about {
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#follow {
+  text-align: center;
+  margin-top: 30px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0px 50px;
+  padding: 0;
+}
+
+#aboutline {
+  margin: -10px 35%;
+}
+
+.icon-container {
+  display: flex; 
+  justify-content: center; 
+  text-align: center;
+  align-items: center; 
+  gap: 50px; 
+  margin: 30px 20px; 
+}
+
+#navbar i {
+  font-size: 16px;
+}
+
+.icon i {
+  font-size: 40px; 
+  color: #A4A4A4;
+}
+
+.nav-links i {
+  color: #1F1F1F;
+  margin-right: 20px;
+}
+
 /* The side navigation menu */
 .sidebar {
     width: 272px;
@@ -60,11 +119,11 @@ html, body {
 
   }
   
-  /* Links on mouse-over */
+  /* Links on mouse-over 
   .nav-links a:hover:not(.active) {
     //background-color: #555; // removed right now for consistency w apple music UI
     color: white;
-  }
+  }*/
 
 .nav-footer {
     display: flex;
@@ -79,15 +138,15 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 20px 0px;
   }
 
-  .footer-links a {
+  #footer {
     padding: 10px;
+    font-size: 5px;
+    align-items: center;
+    justify-content: center;
   }
-
-.footer-links a:hover {
-    color: black;
-}
 
   .nav-footer h2 {
     margin-top: 0;
